@@ -183,8 +183,7 @@ class BlogPostTemplate extends React.Component {
               margin: '90px 0 40px 0',
               fontFamily: systemFont,
             }}
-          >
-          </div>
+          />
           <h3
             style={{
               fontFamily: 'Montserrat, sans-serif',

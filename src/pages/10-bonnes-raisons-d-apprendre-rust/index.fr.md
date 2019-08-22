@@ -1,6 +1,6 @@
 ---
 title: '10 bonnes raisons d'apprendre rust'
-date: '2019-05-17'
+date: '2018-11-11'
 spoiler: .
 ---
 
