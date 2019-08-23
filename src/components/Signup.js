@@ -6,7 +6,7 @@ class Signup extends React.Component {
   render() {
     return (
       <form
-        action="https://app.convertkit.com/forms/812047/subscriptions"
+        action="https://app.convertkit.com/forms/1034425/subscriptions"
         className="seva-form formkit-form"
         method="post"
         min-width="400 500 600 700 800"

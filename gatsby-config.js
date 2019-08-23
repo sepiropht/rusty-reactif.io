@@ -49,6 +49,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
+      head: 'true',
       options: {
         trackingId: `UA-130227707-1`,
       },
