@@ -1,11 +1,11 @@
 ---
-title: 5 bonnes raisons d'apprendre rust
+title: Why you should learn rust and wasm
 date: '2019-08-22'
 spoiler: .
 ---
 
-Rust est language de programmation système crée par mozilla, la version 1.0 date de 2015 et depuis sa popularité ne cesse d'augmenter. A travers ce petit article j'espère si n'est vous convaincre, au moins attirer votre attention et eveiller votre curiosité sur ce nouveau phénomène.
-Allons y!
+Rust is system programming language created by mozilla, version 1.0 dates from 2015 and since then it popularity continues to increase. Through this little article I hope if you are not convinced, at least catch your attention and arouse your curiosity about this new phenomenon.
+Let's go there!
 
 ```rust
 fn main() {
@@ -13,23 +13,23 @@ fn main() {
 }
 ```
 
-# 1. La communauté
-Bizarre de commencer par ce point qui peut sembler certe important mais pas de premier plan lorsqu'on parle d'une nouvelle technologie. Et pourtant la communauté autour de rust est incroyable et croyez moi c'est un aspect important lorsqu'on apprend un nouveau language. Mozilla a vraiment reussi à fédérer une forte communauté de hacker autour de son language.
+# 1. Community
+Weird to start with this point that may seem useful but not so important when talking about a new technology. And yet the community around rust is amazing and believe me this is an important aspect when learning a new language. Mozilla has really managed to federate a strong hacker community around his language.
 
-
-L'un de effets les plus positifs et concrets que ça peut avoir est assez enthousiasmant; rust n'est pas un language trivial, mais paradoxalement les repos open source rust sont des repos où des débutants peuvent contribuer très  facilement. Je fais du javaScript depuis 3 ans et rust de puis 1 ans et je compte déjâ plus de contribution en rust qu'en js sur des repos public. 
-Si vous voulez commencer une carrière dans l'open source rust peut être une voie d'entrée.
+One of the most positive and concrete effects it can have is quite exciting; rust is not a trivial language, but paradoxically open source rust rest are rest where beginners can contribute very easily. I have been doing javaScript for 3 years and rust of 1 year and I already have more contribution in rust than js on public rest.
+If you want to start a career in open source rust can be an entry way. 
 
 # 2. How computer works
-Apprendre rust va vous faire descendre en profondeur dans la Comment ça ? Je m'explique. Si vous êtes comme moi vous souffrez sans doute de ce mal bien répendue parmis les développeurs. Tous les jours un développeur est manipuler un environement ultra complexe dont souvent il n'a qu'une compréhension partielle ou superficielle. Nos principaux outils sont des languages qui masquent la complexité (Java, C#, Js, python, ruby...), nous sommes plus productifs mais le fossé entre ceux qui ont une compréhesion pronfonde du fonctionnemnt interne d'un ordinateur. 
+One of the most positive and concrete effects it can have is quite exciting; rust is not a trivial language, but paradoxically open source rust rest are rest where beginners can contribute very easily. I have been doing javaScript for 3 years and rust of 1 year and I already have more contribution in rust than js on public rest.
+If you want to start a career in open source rust can be an entry way. 
 
 
-# 3. Performance et sécurité
-Si vous travaillez dans l'industie du jeux vidéo ou dans la programmation système(emarquée, temps réels, os), les chances sont grandes que vous soyer obligé d'utiliser l'increvable couple C/C++. Ce language permet de manipuler directement la mémoire, et offre plus de puissance et de fléxibilité. 
+# 3. Performance and security
+If you work in the industie of the video games or in the system programming (marked, real time, bones), the chances are great that you have to use the indestructible C / C ++ couple. This language allows direct manipulation of memory, and offers more power and flexibility.
 
-Cependant ce pouvoir vient avec des incovénients. Ces languages ne procurent pas la même ergonomie que les languages plus hauts niveaux qui eux ont un garbage collecteur qui ralentie le runtime. Et les erreurs de manipulations de pointeurs arrivent fréquement. Rust est à ce jour le seul language mainstream utilisable en production , qui exclue à la fois le garbage collecteur de haut niveau et la maniulation manuel de la mémoire. 
+However, this power comes with inconsistencies. These languages ​​do not provide the same ergonomics as the higher level languages ​​that have a garbage collector that slows the runtime. And pointer manipulation errors happen frequently. Rust is to this day the only mainstream language that can be used in production, which excludes both high-level garbage collection and manual manipulation of memory. 
 
-On arrive à une sorte de conpromis parfait entre la puissance du C et l'expressivité d'un language haut niveau.
+We arrive at a kind of perfect conpromis between the power of C and the expressiveness of a high level language.
 
 ```rust
 fn main() {
@@ -38,29 +38,29 @@ fn main() {
     dbg!(&only_even); // print [2, 4, 6, 8, 10]
 }
 ```
-[Essayer ici](https://play.integer32.com/?version=stable&mode=debug&edition=2018&gist=4c1f5d7094d7484176829522a493fccb)
+[Try it](https://play.integer32.com/?version=stable&mode=debug&edition=2018&gist=4c1f5d7094d7484176829522a493fccb)
 
 
-Voilà la promesse du language une expressivité très js-like mais avec zéro runtime comme en C !
-Cette magie est atteinte grâce au ownership et borrowing qui s'assurent à la compilation qu'il n'y pas d'erreurs de manipulations de variables et de références.
+This is the promise of language expressiveness very js-like but with zero runtime like in C!
+This magic is achieved thanks to the ownership and borrowing which make sure at compile time that there are no errors of manipulations of variables and references.
 
 # 4. Write once, run everywhere
-C'est la prommesse du webassembly. Il permet de sortir du monopole dont javascript jouis depuis plus  20 ans dans le browser.
+This is the presse of webassembly. It allows to leave the monopoly whose javascript enjoyed for over 20 years in the browser.
 
 
-A terme tous les languages pourront compiler vers WASM, mais saujourd'hui dans sa version MVP datant de fevrier 2017, seul les languages sans runtime ont trouvé une utilité pratique. En effet les autres sont obligés d'embarqué avec eux leur runtime pour pouvoir accéder à leur garbage collector. Ce qui allourdit fortement le binaire et diminue fortement l'interêt par rapport à du simple JS.
-Rust et C/C++ parcontre peuvent d'ores et déjâ compilé vers WASM avec des gains de perfs notables dans certains domaines. 
+Eventually all languages ​​will compile to WASM, but now in the MVP version from February 2017, only languages ​​without runtime have found a practical usage. Indeed the others have to bring their runtime with them to be able to access their garbage collector. This make their binary heavier and greatly reduces the interest compared to simple JS. 
+Rust and C/C ++, however, can already be compiled to WASM with significant gains of performance in some areas.
 
 
-Et ce n'est pas tout, grâce à [WASI](https://hacks.mozilla.org/2019/03/standardizing-wasi-a-webassembly-system-interface/) qui est un standart permettant de créer une interface entre les appels système et la VM WASM, on pourra alors utiliser WASM hors du navigateur, mais en gardant l'aspect sandbox du navigator, les lib externes ne pourront pas effectruer des actions critiquent sur les parties du système dont elles n'ont pas accès. Donc un fichier source en rust (ou python, go c...)  compilé une fois en ciblant le wasm pourra s'éxécuter dans tous les os ayant un runtime WASM. Un grand pas en plus vers les développement multiplatform vas être fait. Electron nous a faciliter le developpement de superbes applications, mais demain WASM/WASI visera le même but mais avec des performances clairement supérieur.
+And that's not all, thanks to [WASI](https://hacks.mozilla.org/2019/03/standardizing-wasi-a-webassembly-system-interface/) which is a standart for creating an interface between the system calls and the VM WASM, we can then use WASM out of the browser, but keeping the sandbox aspect of the navigator, the external lib will not be able to perform actions criticize on the parts of the system they do not have access to. So a source file in rust (or python, go c ...) compiled once by targeting the wasm will be able to execute in all the bones having a WASM runtime. A big step towards multiplatform development is going to be done. Electron has facilitated the development of great applications, but tomorrow WASM / WASI will aim for the same goal but with clearly superior performance.
 
 
-Un autre domaine où le WASM est en train s'imisser est le cloud computing. Les lambda n'éxecutent plus du code natifs mais des VM WASM qui par rapport à docker ont un bootime inférieur et une beacoup plus faible empreinte mémoire. WASM bouleverse tellement la donne que l'un des fondateurs de docker Solomon Hykes a recemment fait cette déclation emphatique:  
+Another area where WASM is going to shine is cloud computing. Lambda no longer execute native code, but WASM VMs which, compared to dockers, have lower bootime and a much lower memory footprint. WASM is so up-to-date that one of the founders of docker Solomon Hykes has recently made this emphatic statement: 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">If WASM+WASI existed in 2008, we wouldn&#39;t have needed to created Docker. That&#39;s how important it is. Webassembly on the server is the future of computing. A standardized system interface was the missing link. Let&#39;s hope WASI is up to the task! <a href="https://t.co/wnXQg4kwa4">https://t.co/wnXQg4kwa4</a></p>&mdash; Solomon Hykes (@solomonstre) <a href="https://twitter.com/solomonstre/status/1111004913222324225?ref_src=twsrc%5Etfw">March 27, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 # 5. it 's just fun !
 
-Apprendre rust c'est juste terriblement grisant§. Difficile d'expliquer pourquoi, le sentiments de puissance et de sécurité peut être. Un code en rust qui compile est code où traqurait pas les segmentation fault.
+Learning rust is just terribly exhilarating. Hard to explain why, feelings of power and security can be. A code in rust that compiles is code where it does not track the segmentation fault.
 
-Mais attention la courbe d'apprentissage est très raide, les lifetimes le ownership et le borrowing ne vont pas se laisser dompter facilement. Heureusement ils existent de nombreuses ressources pour apprendre le language en commençant par [rust book](https://doc.rust-lang.org/book/). Il est fortement conseillé d'au moins faire une bonne moitié du bouquin avant de se lancer dans un projet. Le bouquin couvre  tout le language et comprend deux tutoriel implémentant la commande unix grep et un serveur web.
+But beware the learning curve is very steep, the lifetimes the ownership and borrowing are not going to be tamed easily. Fortunately there are many resources to learn the language starting with [rust book](https://doc.rust-lang.org/book/).I strongly recommended you to at least do a good half of the book before embarking on a project. The book covers all the language and includes two tutorials implementing the unix grep command and a web server.
