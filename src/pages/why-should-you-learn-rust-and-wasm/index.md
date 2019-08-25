@@ -1,7 +1,7 @@
 ---
-title: Why you should learn rust and wasm
+title: Why should you learn rust and wasm
 date: '2019-08-22'
-spoiler: .
+spoiler: Rust is system programming language created by mozilla, version 1.0 dates from 2015
 ---
 
 Rust is system programming language created by mozilla, version 1.0 dates from 2015 and since then it popularity continues to increase. Through this little article I hope if you are not convinced, at least catch your attention and arouse your curiosity about this new phenomenon.

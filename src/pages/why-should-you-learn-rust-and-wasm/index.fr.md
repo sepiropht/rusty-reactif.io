@@ -1,19 +1,17 @@
 ---
 title: 5 bonnes raisons d'apprendre rust
 date: '2019-08-22'
-spoiler: .
+spoiler: Rust est language de programmation système crée par mozilla, la version 1.0 date de 2015
 ---
 
 Rust est language de programmation système crée par mozilla, la version 1.0 date de 2015 et depuis sa popularité ne cesse d'augmenter. A travers ce petit article j'espère si n'est vous convaincre, au moins attirer votre attention et eveiller votre curiosité sur ce nouveau phénomène.
 Allons y!
-
 ```rust
 fn main() {
     println!("Hello, World!");
 }
 ```
-
-# 1. La communauté
+# 1. La commuenaute
 Bizarre de commencer par ce point qui peut sembler certe important mais pas de premier plan lorsqu'on parle d'une nouvelle technologie. Et pourtant la communauté autour de rust est incroyable et croyez moi c'est un aspect important lorsqu'on apprend un nouveau language. Mozilla a vraiment reussi à fédérer une forte communauté de hacker autour de son language.
 
 

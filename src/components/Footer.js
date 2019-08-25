@@ -12,8 +12,12 @@ class Footer extends React.Component {
         }}
       >
         <div style={{ float: 'right' }}>
-          <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
-            rss
+          <a
+            href="https://nextcloud.sepiropht.appboxes.co/index.php/s/YyqbLxw5tSbpecW"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            resume
           </a>
         </div>
         <a

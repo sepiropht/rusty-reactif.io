@@ -80,7 +80,6 @@ module.exports = {
               `;
 
                 let html = edge.node.html;
-                // Hacky workaround for https://github.com/gaearon/overreacted.io/issues/65
                 html = html
                   .replace(/href="\//g, `href="${siteUrl}/`)
                   .replace(/src="\//g, `src="${siteUrl}/`)
@@ -121,7 +120,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: "Dan Abramov's Overreacted Blog RSS Feed",
+            title: "William's substack Blog RSS Feed",
           },
         ],
       },
@@ -129,8 +128,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Overreacted`,
-        short_name: `Overreacted`,
+        name: `substack`,
+        short_name: `substack`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffa7c4`,
