@@ -1,5 +1,5 @@
 ---
-title: 5 bonnes raisons d'apprendre rust
+title: Pourquoi vous devez apprendre Rust et WASM
 date: '2019-08-22'
 spoiler: Rust est language de programmation système crée par mozilla, la version 1.0 date de 2015
 ---
@@ -11,14 +11,14 @@ fn main() {
     println!("Hello, World!");
 }
 ```
-# 1. La commuenaute
+# 1. La communauté
 Bizarre de commencer par ce point qui peut sembler certe important mais pas de premier plan lorsqu'on parle d'une nouvelle technologie. Et pourtant la communauté autour de rust est incroyable et croyez moi c'est un aspect important lorsqu'on apprend un nouveau language. Mozilla a vraiment reussi à fédérer une forte communauté de hacker autour de son language.
 
 
 L'un de effets les plus positifs et concrets que ça peut avoir est assez enthousiasmant; rust n'est pas un language trivial, mais paradoxalement les repos open source rust sont des repos où des débutants peuvent contribuer très  facilement. Je fais du javaScript depuis 3 ans et rust de puis 1 ans et je compte déjâ plus de contribution en rust qu'en js sur des repos public. 
 Si vous voulez commencer une carrière dans l'open source rust peut être une voie d'entrée.
 
-# 2. How computer works
+# 2. Comment fonctionne un ordinateur
 Rust est language bas niveau 
 
 
@@ -42,7 +42,7 @@ fn main() {
 Voilà la promesse du language une expressivité très js-like mais avec zéro runtime comme en C !
 Cette magie est atteinte grâce au ownership et borrowing qui s'assurent à la compilation qu'il n'y pas d'erreurs de manipulations de variables et de références.
 
-# 4. Write once, run everywhere
+# 4. Ecriver une fois, deployer partout
 C'est la prommesse du webassembly. Il permet de sortir du monopole dont javascript jouis depuis plus  20 ans dans le browser.
 
 
@@ -57,7 +57,7 @@ Un autre domaine où le WASM est en train s'imisser est le cloud computing. Les 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">If WASM+WASI existed in 2008, we wouldn&#39;t have needed to created Docker. That&#39;s how important it is. Webassembly on the server is the future of computing. A standardized system interface was the missing link. Let&#39;s hope WASI is up to the task! <a href="https://t.co/wnXQg4kwa4">https://t.co/wnXQg4kwa4</a></p>&mdash; Solomon Hykes (@solomonstre) <a href="https://twitter.com/solomonstre/status/1111004913222324225?ref_src=twsrc%5Etfw">March 27, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-# 5. it 's just fun !
+# 5. C'est juste fun!
 
 Apprendre rust c'est juste terriblement grisant§. Difficile d'expliquer pourquoi, le sentiments de puissance et de sécurité peut être. Un code en rust qui compile est code où traqurait pas les segmentation fault.
 
