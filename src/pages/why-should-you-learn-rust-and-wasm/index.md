@@ -1,6 +1,6 @@
 ---
 title: Why should you learn rust and wasm
-date: '2019-08-??'
+date: '2019-08-25'
 spoiler: Rust is system programming language created by mozilla, version 1.0 dates from 2015
 ---
 
