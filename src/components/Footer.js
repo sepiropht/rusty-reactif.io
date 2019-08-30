@@ -13,7 +13,7 @@ class Footer extends React.Component {
       >
         <div style={{ float: 'right' }}>
           <a
-            href="https://nextcloud.sepiropht.appboxes.co/index.php/s/YyqbLxw5tSbpecW"
+            href="http://nextcloud.sepiropht.appboxes.co/index.php/s/DBWT8SbYbN6kfSx"
             target="_blank"
             rel="noopener noreferrer"
           >
