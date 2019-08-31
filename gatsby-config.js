@@ -51,7 +51,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       head: 'true',
       options: {
-        trackingId: `UA-130227707-1`,
+        trackingId: `UA-146778312-1`,
       },
     },
     {
@@ -132,7 +132,7 @@ module.exports = {
         short_name: `substack`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#ffa7c4`,
+        theme_color: `#14c94e`,
         display: `minimal-ui`,
         icon: `src/assets/icon.png`,
       },
