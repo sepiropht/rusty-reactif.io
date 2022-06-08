@@ -1,20 +1,37 @@
 module.exports = {
   siteMetadata: {
-    title: 'Rusty&Reactif',
-    author: 'William Mbotta',
-    description: 'Personal blog by William Mbotta.',
-    siteUrl: 'https://????.io',
+    title: `mesw.io`,
+    author: {
+      name: `William Mbotta`,
+      summary: `Je veux une ferme de minage et une ferme tout court, en attendant j'explore rust et la stack web`,
+    },
+    description: `A starter blog demonstrating what Gatsby can do.`,
+    siteUrl: `https://mesw.io/`,
     social: {
-      twitter: '@sepiropht',
+      twitter: `sepiropht`,
     },
   },
-  pathPrefix: '/',
   plugins: [
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      head: 'true',
+      options: {
+        trackingId: `UA-146778312-1`,
       },
     },
     {
@@ -24,7 +41,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 630,
             },
           },
           {
@@ -33,27 +50,20 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          'gatsby-remark-autolink-headers',
-          {
-            resolve: 'gatsby-remark-prismjs',
-            options: {
-              inlineCodeMarker: '÷',
-            },
-          },
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
         ],
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      head: 'true',
-      options: {
-        trackingId: `UA-146778312-1`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: `ADD YOUR TRACKING ID HERE`,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -72,55 +82,37 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                const siteUrl = site.siteMetadata.siteUrl;
-                const postText = `
-                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at overreacted.io. You can read it online by <a href="${siteUrl +
-                  edge.node.fields.slug}">clicking here</a>.)</div>
-              `;
-
-                let html = edge.node.html;
-                html = html
-                  .replace(/href="\//g, `href="${siteUrl}/`)
-                  .replace(/src="\//g, `src="${siteUrl}/`)
-                  .replace(/"\/static\//g, `"${siteUrl}/static/`)
-                  .replace(/,\s*\/static\//g, `,${siteUrl}/static/`);
-
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.spoiler,
-                  date: edge.node.fields.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': html + postText }],
-                });
-              });
+              return allMarkdownRemark.nodes.map(node => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ "content:encoded": node.html }],
+                })
+              })
             },
             query: `
               {
                 allMarkdownRemark(
-                  limit: 1000,
-                  sort: { order: DESC, fields: [frontmatter___date] }
-                  filter: {fields: { langKey: {eq: "en"}}}
+                  sort: { order: DESC, fields: [frontmatter___date] },
                 ) {
-                  edges {
-                    node {
-                      excerpt(pruneLength: 250)
-                      html
-                      fields { 
-                        slug   
-                      }
-                      frontmatter {
-                        title
-                        date
-                        spoiler
-                      }
+                  nodes {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
                     }
                   }
                 }
               }
             `,
-            output: '/rss.xml',
-            title: "William's substack Blog RSS Feed",
+            output: "/rss.xml",
+            title: "Gatsby Starter Blog RSS Feed",
           },
         ],
       },
@@ -128,29 +120,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `substack`,
-        short_name: `substack`,
+        name: `mesw`,
+        short_name: `GatsbyJS`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#14c94e`,
+        // This will impact how browsers show your PWA/website
+        // https://css-tricks.com/meta-theme-color-and-trickery/
+        // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/icon.png`,
+        icon: `src/images/2-512.webp`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'src/utils/typography',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-i18n',
-      options: {
-        langKeyDefault: 'en',
-        useLangKeyLayout: false,
-      },
-    },
-    `gatsby-plugin-catch-links`,
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
-};
+}

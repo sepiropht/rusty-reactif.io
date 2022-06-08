@@ -1,11 +1,8 @@
-# [?????.io](https://????.io/)
 
-My personal blog. Forked from [Gatsby blog starter](https://github.com/gatsbyjs/gatsby-starter-blog). (https://github.com/sdras/night-owl-vscode-theme/) with small tweaks.
+# [mesw.io](https://mesw.io/)
 
-To run locally, `yarn`, then `yarn dev`, then open https://localhost:8000.
+My personal blog. Forked from [Gatsby blog starter](https://github.com/gatsbyjs/gatsby-starter-blog). 
 
-## Contributing Translations
-
-You can translate any article on the website into your language!
+To run locally, `yarn`, then `yarn start`, then open https://localhost:8000.
 
 
